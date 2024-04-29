@@ -43,7 +43,7 @@ async function run() {
             query = {email:req.query.email}
          }
 
-      const cursor = passwordCollection.find();
+      const cursor = passwordCollection.find(query);
       const result = await cursor.toArray();
 
       res.send(result);
